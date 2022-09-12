@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+.nav{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    border: dotted 1px red;
+    background-color: #1992d4;
+    color: #fff;
+}
+.nav h1{
+    margin: 10px 0 0 30px;
+}
+.user-list, .system-list {
+    margin: 30px;
+    list-style: none;
+}
+.user-list li, .system-list li {
+    padding: 10px 0 10px 0;
+    width: fit-content;
+    font-weight: 700;
+    transition: font-weight 0.4s;
+}
+.user-list li:hover, .system-list li:hover {
+    cursor: pointer;
+    font-weight: 1000;
+}
+.content{
+    grid-column: 2 / span 1;
+    border: dotted 1px blue;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header-content {
+    grid-row: 1 / span 1;
+    border: dotted 1px blueviolet;
+    background-color: #fff;
+}
+.main-content {
+    grid-row: 2 / span 1;
+    border: dotted 1px purple;
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+}
+.main-content .projects {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    border: dotted 1px rgb(110, 6, 110);
+}
+.main-content .projects .cards {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.main-content .projects .cards .card {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #333;
+    height: 200px;
+    padding: 15px;
+    margin: 15px;
+}
+.main-content .projects .cards .card .buttons{
+    align-self: end;
+    margin-top: 20px;
+}
+.main-content .projects h3 {
+    margin: 15px;
+}
+.main-content .system-alerts {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    border: dotted 1px rgb(211, 33, 211);
+}
+.main-content .system-alerts h3 {
+    margin: 15px;
+}
+.main-content .news{
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    border: dotted 1px rgb(61, 9, 61);
+}
+.main-content .news h3 {
+    margin: 15px;
+}
