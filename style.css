@@ -37,13 +37,60 @@
     grid-column: 2 / span 1;
     border: dotted 1px blue;
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 7fr;
 }
 
 .header-content {
     grid-row: 1 / span 1;
     border: dotted 1px blueviolet;
     background-color: #fff;
+}
+.header-content .search-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-content input[type="search"] {
+    /* grid-column: 1 / span 1; */
+    outline: 0;
+    appearance: none;
+    border: transparent 1px solid;
+    border-radius: 20px;
+    background-color: #e2e8f0;
+    width: 450px;
+    margin: 20px 0 20px 50px;
+}
+.header-content .search-section h4 {
+    margin: 20px 50px;
+}
+.header-content .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-content .profile-section{
+    width: 450px;
+    margin: 20px 0 20px 50px;
+}
+.header-content .profile-section .small{
+    font-size: 12px;
+}
+.header-content .profile-section .bold{
+    font-weight: 700;
+}
+.header-content .profile .profile-buttons{
+    margin: 20px 50px;
+}
+.header-content .profile .profile-buttons buttons{
+    padding: 10px 24px;
+    border: 1px transparent solid;
+    border-radius: 30px;
+    background-color: #1992D4;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
 }
 .main-content {
     grid-row: 2 / span 1;
@@ -69,6 +116,40 @@
     height: 200px;
     padding: 15px;
     margin: 15px;
+    background-color: #fff;
+}
+.system-alerts .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: solid 1px #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    height: 350px;
+}
+.system-alerts .card .card-section{
+    margin: 5px 0;
+}
+.system-alerts .card p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #636363;
+}
+.system-alerts .card > :not(:last-child){
+    border-bottom: #d2d2d2 2px solid;
+}
+.news .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+    border: solid 1px #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    height: 350px;
+
 }
 .main-content .projects .cards .card .buttons{
     align-self: end;
